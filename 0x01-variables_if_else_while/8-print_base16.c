@@ -2,28 +2,22 @@
 #include <stdlib.h>
 /**
  * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
+ * Description: prints base 16
  * Return: 0
  */
 int main(void)
 {
-	char d = '0';
+	int num;
 
-	while (d <= '9')
-	{
-		putchar(d);
-		d++;
-	}
+	char letter;
 
-	char c = 'a';
+	for (num = 0; num < 10; num++)
+		putchar((num % 10) + '0');
 
-	while (c <= 'f')
-	{
-		putchar(c);
-		c++;
-	}
+	for (letter = 'a'; letter <= 'f'; letter++)
+		putchar(letter);
 
 	putchar('\n');
+
 	return (0);
 }
